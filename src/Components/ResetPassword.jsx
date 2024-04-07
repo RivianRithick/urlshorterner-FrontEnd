@@ -16,7 +16,9 @@ const ResetPassword = () => {
 
   const validateToken = async () => {
     try {
-      let res = await axios.get("http://localhost:4000/api/user/listallusers");
+      let res = await axios.get(
+        "https://urlshorterner-aqay.onrender.com/api/user/listallusers"
+      );
 
       if (res.data && res.data.users) {
         const reqUser = res.data.find((user) => user.email === email);
@@ -48,7 +50,7 @@ const ResetPassword = () => {
   const onSubmit = async (values) => {
     try {
       const res = await axios.put(
-        "http://localhost:4000/api/user/resetpassword",
+        "https://urlshorterner-aqay.onrender.com/api/user/resetpassword",
         { ...values, email }
       );
 

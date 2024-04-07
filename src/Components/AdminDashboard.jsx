@@ -11,11 +11,14 @@ const AdminDashboard = ({ token, setResponseData }) => {
 
   const handleView = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/user/authorized", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(
+        "https://urlshorterner-aqay.onrender.com/api/user/authorized",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setResponseData(res.data.data);
       setResponseMsg(res.data.message);
       toast.success(res.data.message);
@@ -30,11 +33,14 @@ const AdminDashboard = ({ token, setResponseData }) => {
 
   const handleCheck = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/api/user/authorized", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(
+        "https://urlshorterner-aqay.onrender.com/api/user/authorized",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setResponseData(res.data.data);
       setResponseMsg(res.data.message);
       toast.success(res.data.message);
